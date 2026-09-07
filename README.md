@@ -15,7 +15,13 @@ La mayoría de "clona este post viral" copia texto y diseño literal — lo cual
 
 ## Instalación
 
-Copia esta carpeta a tu directorio de skills de Claude Code (`.claude/skills/viral-cover-brief/`), o instálala vía tu gestor de skills si la publicas como repo (ej. `npx skills add <owner>/<repo>`).
+Un solo comando, corre un scan de seguridad (Snyk) automático antes de traer el código a tu máquina:
+
+```
+npx skills add StefanoCoronado/viral-cover-brief
+```
+
+Se instala para Claude Code y el resto de agentes compatibles con [skills.sh](https://skills.sh). Si preferís copiarla a mano, la carpeta completa va en `.claude/skills/viral-cover-brief/`.
 
 ## Estructura
 
