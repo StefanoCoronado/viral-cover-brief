@@ -2,7 +2,9 @@
 
 Esta skill ya no escribe el prompt final — lo escribe tu asistente de IA a partir del brief, siguiendo `04-prompt-maestro-google-flow.md`. Esta plantilla define qué campos técnicos debe cubrir el brief para que ese asistente tenga todo lo necesario, sin ambigüedad: escena, zona protegida, personaje/prop, paleta, formato y luz. Úsala al armar el brief en el paso BRIEF, no como texto final para pegar en la herramienta de imagen.
 
-Sigue evitando los artefactos de costura comunes al generar directo en un formato vertical: pedir la proporción final (ej. 4:5) explícitamente, describir elementos reales en la zona superior en vez de "espacio vacío", y posicionar el personaje (si lo tienes) en el tercio inferior.
+Sigue evitando los artefactos de costura comunes al generar directo en un formato vertical: pedir la proporción final (ej. 3:4, el único ratio vertical no-story que soporta Google Flow) explícitamente, describir elementos reales en la zona superior en vez de "espacio vacío", y posicionar el personaje (si lo tienes) en el tercio inferior.
+
+Google Flow solo acepta 16:9, 4:3, 1:1, 3:4 o 9:16 — ningún otro ratio (nada de 4:5, 16:10, etc.).
 
 ## Estructura
 
@@ -25,9 +27,10 @@ Sigue evitando los artefactos de costura comunes al generar directo en un format
 [PALETA]     2-4 colores concretos de tu propia marca — mencionar los
              dominantes según el tratamiento elegido.
 
-[FORMATO]    Proporción final exacta (ej. 4:5), generar directo en esa
-             proporción — nunca recortar en post, ahí es donde aparecen
-             las costuras.
+[FORMATO]    Proporción final exacta — solo 16:9, 4:3, 1:1, 3:4 o 9:16
+             (los únicos que soporta Google Flow) — generar directo en
+             esa proporción, nunca recortar en post, ahí es donde
+             aparecen las costuras.
 
 [LUZ]        1 frase — dirección y calidad de luz, coherente con el
              tratamiento elegido.
@@ -41,7 +44,7 @@ deseado]. Zona superior con degradado suave de [color A] a [color B],
 sin elementos de detalle — solo luz y color. En el tercio inferior,
 [tu personaje: descripción breve y consistente] de pie, con [prop
 elegido], mirada hacia arriba-centro. Paleta: [colores hex de tu
-marca]. Formato vertical 4:5, generado directo en esa proporción. Luz
+marca]. Formato vertical 3:4, generado directo en esa proporción. Luz
 suave y cálida desde atrás del personaje, sin sombras duras.
 ```
 

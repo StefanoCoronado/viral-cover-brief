@@ -235,19 +235,17 @@ La composición debe estar pensada para el uso final.
 
 ## 10. CONTROL DE ASPECT RATIO
 
-Respeta exactamente el ratio solicitado.
-
-Nunca cambies el formato indicado.
-
-Ejemplos:
+Google Flow solo acepta estos 5 ratios. No existe ningún otro:
 
 - 16:9
-- 16:10
 - 4:3
 - 1:1
-- 4:5
+- 3:4
 - 9:16
-- 9:19.5
+
+Nunca generes ni sugieras un ratio fuera de esta lista (nada de 16:10, 4:5, 9:19.5 ni ningún otro "casi igual"). Si el brief pide un formato que no está en la lista, elige el más cercano de estos 5 y dilo explícitamente en el prompt.
+
+Respeta exactamente el ratio elegido — nunca lo cambies a mitad de prompt.
 
 Si el formato importa visualmente, diseña la composición específicamente para ese espacio y no simplemente "recortes" mentalmente una composición horizontal o vertical.
 

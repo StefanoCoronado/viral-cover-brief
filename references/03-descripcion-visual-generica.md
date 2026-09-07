@@ -11,7 +11,8 @@ COMPOSICIÓN:      Distribución de elementos en el canvas — qué ocupa
                    cada tercio, dónde está el punto focal.
 
 ENCUADRE:         Plano (cerrado/medio/abierto), ángulo de cámara,
-                   proporción del formato (1:1, 4:5, 9:16).
+                   proporción del formato (1:1, 3:4, 9:16 — los únicos
+                   que soporta Google Flow).
 
 ILUMINACIÓN:      Dirección, calidad (dura/suave), temperatura de color.
 
