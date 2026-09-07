@@ -1,6 +1,6 @@
 ---
 name: viral-cover-brief
-description: Convierte cualquier imagen de referencia (un post/reel viral, o una foto de un banco libre como Unsplash, Pexels o Pixabay) en un brief de portada (slide 1) reutilizable con tu propia marca — sin depender de un brand guide específico. Entrevista al usuario sobre la sensación deseada y el propósito de la pieza antes de proponer nada. Rama "sistema propio" (si tienes paleta, tipografía y/o un personaje de marca fijos) genera un prompt listo para Google Flow u otra herramienta de imagen IA. Rama "genérica" devuelve una descripción visual objetiva en puntos para que armes tu propio prompt en cualquier herramienta. Actívala cuando pegues una imagen de referencia y quieras "adaptar esto", "algo así, con mi marca", "inspirado en esta imagen", o cualquier variante de traducir una referencia ajena a tu propio sistema visual — sin copiar texto ni diseño del original, solo su mecánica de estilo.
+description: Convierte cualquier imagen de referencia (un post/reel viral, o una foto de un banco libre como Unsplash, Pexels o Pixabay) en un brief de portada (slide 1) reutilizable con tu propia marca — sin depender de un brand guide específico. Entrevista al usuario sobre la sensación deseada y el propósito de la pieza antes de proponer nada. Esta skill nunca escribe el prompt final de Google Flow: entrega siempre un brief (rama "sistema propio": tratamiento + prop de marca; rama "genérica": descripción visual objetiva en puntos), listo para pegar junto con la instrucción maestra incluida (references/04-prompt-maestro-google-flow.md) en un asistente conversacional que arma el prompt final. Actívala cuando pegues una imagen de referencia y quieras "adaptar esto", "algo así, con mi marca", "inspirado en esta imagen", o cualquier variante de traducir una referencia ajena a tu propio sistema visual — sin copiar texto ni diseño del original, solo su mecánica de estilo.
 ---
 
 # Viral Cover Brief
@@ -45,15 +45,21 @@ Esta skill no viene con una paleta, tipografía o personaje predefinidos. Si tie
               si lo tienes (ver references/00-plantilla-taxonomia-props.md); si el tema
               no tiene prop aún, propón uno nuevo y espera aprobación antes de fijarlo.
 6. BRIEF      Devolver: tratamiento elegido + por qué (citando la entrevista), prop
-              elegido + por qué (si aplica), script de prompt para tu herramienta de
-              imagen IA (plantilla en references/01-plantilla-prompt-imagen.md). El
+              elegido + por qué (si aplica), y los campos técnicos de escena/zona
+              protegida/paleta/formato/luz (plantilla en references/01-plantilla-prompt-imagen.md).
+              Esta skill NUNCA escribe aquí el prompt final — solo el brief. El
               resultado es siempre una variante nueva — nunca una réplica de la
               referencia, solo comparte su mecánica de estilo.
-7. ESPERA     Corres el prompt en tu herramienta (Google Flow, Midjourney, etc.)
-              y devuelves la imagen generada.
-8. VERIFICAR  Checklist de references/01-plantilla-prompt-imagen.md sobre el render real —
+7. MAESTRO    Entregar el brief completo del paso 6 listo para pegar en un asistente
+              conversacional (ChatGPT u otro LLM), junto con la instrucción de
+              references/04-prompt-maestro-google-flow.md como system prompt de esa
+              conversación. Ese asistente devuelve el prompt final listo para Google
+              Flow — esta skill no lo genera.
+8. ESPERA     Corres el prompt (ya generado por el asistente) en tu herramienta
+              (Google Flow, Midjourney, etc.) y devuelves la imagen generada.
+9. VERIFICAR  Checklist de references/01-plantilla-prompt-imagen.md sobre el render real —
               nunca aprobar solo sobre la descripción de la escena.
-9. ENSAMBLAR  La imagen entra a tu herramienta de diseño (Figma, Canva) como fondo;
+10. ENSAMBLAR La imagen entra a tu herramienta de diseño (Figma, Canva) como fondo;
               el texto va siempre como capa aparte encima, nunca horneado en la imagen.
 
 ── RAMA GENÉRICA (sin sistema de marca fijo) ──
@@ -65,9 +71,12 @@ A1. DESCRIBIR  Extraer la mecánica visual de la referencia en puntos separados
 A1.5 ENTREVISTA Mismas 3 preguntas del paso 3 de la rama propia (sensación deseada,
                propósito de la pieza, qué NO conservar) — obligatorio antes del brief.
 A2. BRIEF      Devolver mecánica + descripción visual en puntos + respuestas de la
-               entrevista. No se genera un prompt cerrado — arma tu propio prompt
-               para la herramienta que uses.
-A3. HANDOFF    Continúa con tu propio proceso de tipografía, paleta y layout.
+               entrevista. Esta skill nunca genera un prompt cerrado en esta rama
+               tampoco.
+A3. MAESTRO    Opcional: si quieres que un asistente arme el prompt final en vez de
+               armarlo tú a mano, pega este brief junto con
+               references/04-prompt-maestro-google-flow.md en un LLM conversacional.
+A4. HANDOFF    Continúa con tu propio proceso de tipografía, paleta y layout.
 ```
 
 ## Reglas duras
@@ -77,7 +86,7 @@ A3. HANDOFF    Continúa con tu propio proceso de tipografía, paleta y layout.
 - El prop/pose de tu personaje (si tienes uno) se elige por **tema de la pieza** (definido en la entrevista), nunca por replicar literalmente el sujeto de la imagen de referencia.
 - Si la referencia no tiene personaje/mascota, no fuerces a meter el tuyo — el tratamiento puede resolver sin él (T1, T3, T4).
 - Todo prop nuevo, antes de entrar a tu catálogo fijo, márcalo `[NUEVO — sin confirmar]` en el brief de salida. Pasa a fijo recién cuando lo uses en una pieza real y lo apruebes.
-- La skill no genera la imagen en ninguna rama. Rama propia: genera el prompt, tú lo corres en tu herramienta. Rama genérica: ni siquiera genera el prompt — genera la descripción cruda, el prompt lo armas tú.
+- La skill no genera la imagen en ninguna rama, y nunca escribe el prompt final de Google Flow ella misma — en ambas ramas entrega un brief/descripción. El prompt final sale de pegar ese brief + `references/04-prompt-maestro-google-flow.md` en un asistente conversacional (ChatGPT u otro), o de armarlo a mano si prefieres.
 - El texto del slide 1 nunca se decide en la imagen generada — se decide después, en tu herramienta de diseño.
 
 ## Salida esperada (formato del brief)
@@ -91,8 +100,12 @@ TRATAMIENTO:  T2 — Backdrop + scrim
 POR QUÉ:      [1–2 líneas, qué mecánica de la referencia se está adaptando y cómo
               conecta con la sensación pedida]
 PROP:         [nombre del prop] — [motivo, ligado al tema] (si aplica)
-PROMPT:       [bloque de texto, ver references/01-plantilla-prompt-imagen.md]
+CAMPOS TÉCNICOS: [escena, zona protegida, paleta, formato, luz — ver
+              references/01-plantilla-prompt-imagen.md]
 PENDIENTE:    [si el prop es nuevo, marcarlo aquí]
+SIGUIENTE PASO: pega este brief completo + references/04-prompt-maestro-google-flow.md
+              en tu asistente conversacional (ChatGPT u otro) para obtener el
+              prompt final listo para Google Flow. Esta skill no lo genera.
 ```
 
 Rama genérica — ver formato completo en `references/03-descripcion-visual-generica.md`.

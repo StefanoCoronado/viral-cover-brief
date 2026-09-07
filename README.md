@@ -7,8 +7,8 @@ Skill para [Claude Code](https://claude.com/claude-code) / Claude que convierte 
 - Analiza la imagen de referencia y extrae su mecánica visual (composición, luz, paleta, textura) — nunca el sujeto exacto ni el texto.
 - **Te entrevista** sobre qué sensación querés transmitir y para qué es la pieza, antes de generar cualquier brief — no asume que sabés exactamente qué querés solo por la referencia que pegaste.
 - La mapea a uno de 6 tratamientos visuales genéricos (tipográfico puro, backdrop + scrim, duotono, corte, marco, halo).
-- Rama con sistema de marca propio: genera un prompt listo para tu herramienta de imagen IA (Google Flow, Midjourney, etc.), incluyendo a tu personaje/mascota si tienes uno.
-- Rama genérica (sin sistema de marca): devuelve una descripción visual objetiva en puntos, para que armes tu propio prompt en la herramienta que uses.
+- **Nunca escribe el prompt final de Google Flow.** Entrega siempre un brief: rama con sistema de marca propio (tratamiento + prop de tu personaje si tienes uno), rama genérica (descripción visual objetiva en puntos).
+- El brief incluye la instrucción maestra lista para pegar en tu asistente conversacional (ChatGPT u otro LLM) — ese asistente es el que arma el prompt final listo para copiar en Google Flow.
 - El resultado es siempre una variante de inspiración — un concepto propio, nunca una copia con los colores cambiados.
 
 ## Por qué existe
@@ -30,9 +30,10 @@ Se instala para Claude Code y el resto de agentes compatibles con [skills.sh](ht
 ```
 SKILL.md                                      Flujo principal
 references/00-plantilla-taxonomia-props.md    Plantilla para el catálogo de props de tu personaje
-references/01-plantilla-prompt-imagen.md      Plantilla del prompt de imagen IA
+references/01-plantilla-prompt-imagen.md      Campos técnicos que debe cubrir el brief
 references/02-mapeo-hooks-visuales.md         Tabla de mapeo mecánica → tratamiento T1-T6
 references/03-descripcion-visual-generica.md  Estructura de la rama sin sistema de marca
+references/04-prompt-maestro-google-flow.md   Instrucción maestra para tu asistente — convierte el brief en el prompt final
 evals/casos.md                                Plantilla vacía para tu propio registro de casos
 ```
 
@@ -41,7 +42,8 @@ evals/casos.md                                Plantilla vacía para tu propio re
 1. Activa la skill y pega la imagen de referencia (post/reel viral, o foto de Unsplash/Pexels/Pixabay).
 2. Responde si tienes un sistema de marca propio (paleta/personaje) o prefieres la rama genérica.
 3. Contesta la entrevista corta (sensación deseada, para qué es la pieza, qué no querés conservar del estilo de referencia).
-4. Sigue el brief resultante — nunca reproduce texto, sujeto ni diseño exacto del original.
+4. Recibes el brief — nunca reproduce texto, sujeto ni diseño exacto del original, y nunca es el prompt final.
+5. Pega el brief junto con `references/04-prompt-maestro-google-flow.md` en tu asistente conversacional (ChatGPT u otro) para obtener el prompt final listo para Google Flow.
 
 ## Licencia
 
