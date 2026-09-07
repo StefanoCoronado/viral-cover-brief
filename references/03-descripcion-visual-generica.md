@@ -38,6 +38,10 @@ ELEMENTOS GRÁFICOS: Formas, iconografía, tipografía si es parte de la
 
 ```
 SISTEMA:      Genérico (sin sistema de marca fijo)
+SENSACIÓN:    [respuesta de la entrevista — ej. "lujo discreto, urgencia baja"]
+PROPÓSITO:    [para qué es la pieza, de la entrevista]
+DIRECCIÓN/ENFOQUE: [idea, ángulo o concepto propio de la persona, si lo dio —
+              o "sin dirección propia, abierto a interpretación" si dijo que no]
 MECÁNICA:     [1-2 líneas, qué hace que el post pare el scroll]
 DESCRIPCIÓN VISUAL:
   COMPOSICIÓN:        [...]
@@ -46,5 +50,7 @@ DESCRIPCIÓN VISUAL:
   COLORES DOMINANTES: [...]
   TEXTURAS:           [...]
   ELEMENTOS GRÁFICOS: [...]
-HANDOFF:      → tu propio proceso de tipografía, paleta y layout
+SIGUIENTE PASO: pega este brief completo + references/04-prompt-maestro-google-flow.md
+              en tu asistente conversacional (opcional), o arma tu propio prompt a
+              mano con tu proceso de tipografía, paleta y layout.
 ```

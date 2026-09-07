@@ -69,10 +69,18 @@ A1. DESCRIBIR  Extraer la mecánica visual de la referencia en puntos separados
                Sin paleta de marca — agnóstico. Un personaje/mascota es opcional acá:
                si lo pides para esta pieza, se describe como elemento gráfico libre.
 A1.5 ENTREVISTA Mismas 3 preguntas del paso 3 de la rama propia (sensación deseada,
-               propósito de la pieza, qué NO conservar) — obligatorio antes del brief.
+               propósito de la pieza, qué NO conservar), más una 4ta pregunta
+               obligatoria propia de esta rama — al no haber sistema de marca que
+               ancle la dirección, hay que preguntarla directo:
+               - "¿Tienes alguna dirección, enfoque o idea propia para esta pieza
+                 — un ángulo, un concepto, algo puntual que quieras probar — más
+                 allá de lo que sugiere la referencia?" Si la respuesta es "no,
+                 sorpréndeme" o similar, es válida — no forzar una dirección donde
+                 no la hay, solo dejar la puerta abierta para que la persona se
+                 ponga creativa sin sentir que tiene que copiar la referencia.
 A2. BRIEF      Devolver mecánica + descripción visual en puntos + respuestas de la
-               entrevista. Esta skill nunca genera un prompt cerrado en esta rama
-               tampoco.
+               entrevista (incluida la dirección/enfoque propio si la dieron).
+               Esta skill nunca genera un prompt cerrado en esta rama tampoco.
 A3. MAESTRO    Opcional: si quieres que un asistente arme el prompt final en vez de
                armarlo tú a mano, pega este brief junto con
                references/04-prompt-maestro-google-flow.md en un LLM conversacional.
